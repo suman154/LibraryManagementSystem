@@ -5,8 +5,8 @@ Library Management System Project:
 
    # Backend development with django
 	- Models
-	- Views(Api) (DRF)
-	- Urls(Api) (DRF)
+	- Views(Api) (Django Rest Framework (DRF))
+	- Urls(Api) (Django Rest Framework(DRF))
 	- Serializer
 
      
@@ -41,7 +41,8 @@ Library Management System Project:
        - email (EmailField)
 
 
-    Add books file in various format
+    Add books 
+    (file in various format)
         formats = (
           ('pdf', 'PDF'),
           ('word', 'Word'),
