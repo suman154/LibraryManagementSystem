@@ -1,0 +1,58 @@
+Create a Library Management System with the feature to (Crud: books, category, Authors and add books file in various format)
+
+Library Management System Project:
+
+
+   # Backend development with django
+	- Models
+	- Views(Api) (DRF)
+	- Urls(Api) (DRF)
+	- Serializer
+
+     
+    Book
+      - title (CharField)
+      - author (ForeignKey)
+      - category (ForeignKey)
+      - description (TextField)
+      - ISBN (CharField)
+      - status (CharField)
+      - date_added (DateTimeField)
+      - date_created (DateTimeField)
+      - delete_flag (IntegerField)
+      - published_date (DateField)
+        BookType
+        -name (CharField)
+      
+      
+
+       Category
+     - name (CharField)
+     - description (TextField)
+     - status (CharField)
+     - delete_flag (IntegerField)
+     - date_added (DateTimeField)
+     - date_created (DateTimeField)
+
+
+    Authors
+       - name (CharField)
+       - bio (TextField)
+       - email (EmailField)
+
+
+    Add books file in various format
+        formats = (
+          ('pdf', 'PDF'),
+          ('word', 'Word'),
+          ('docs', 'Docs'),
+          ('txt', 'Plain Text'),
+        )
+       - file_format (CharField)
+       - book_file (FileField)
+      
+       
+   
+
+
+    
