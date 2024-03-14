@@ -24,14 +24,14 @@ class GroupView(ModelViewSet):
 class BooksView(ModelViewSet):
     queryset = Books.objects.all()
     serializer_class = BooksSerializer
-    filter_fields = ['type']
+    filters_fields = ['type']
     search_fields = ['name', 'description']
 
 
 class BookTypeView(ModelViewSet):
     queryset = BookType.objects.all()
     serializer_class = BookTypeSerializer
-    filter_fields = ['type']
+    filters_fields = ['type']
     search_fields = ['name', 'description']
 
 
@@ -73,7 +73,7 @@ def delete(self,request,pk):
 class CategoryView(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    filter_fields = ['type']
+    filters_fields = ['type']
     search_fields = ['name', 'description']
 
 class CategoryEditView(GenericAPIView):
@@ -115,7 +115,7 @@ def delete(self,request,pk):
 class AuthorsView(ModelViewSet):
     queryset = Authors.objects.all()
     serializer_class = AuthorsSerializer
-    filter_fields = ['type']
+    filters_fields = ['type']
     search_fields = ['name', 'description']
 
 
@@ -158,7 +158,7 @@ def delete(self,request,pk):
 class AddBookView(ModelViewSet):
     queryset = AddBook.objects.all()
     serializer_class = AddBookSerializer
-    filter_fields = ['type']
+    filters_fields = ['type']
     search_fields = ['name', 'description']
 
 class AddBookEditView(GenericAPIView):

@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'add_book',
     'rest_framework',
     'rest_framework.authtoken',
+    'django.contrib.auth'
+    'django.contrib.contenttypes'
     'django_filters'
 ]
 
