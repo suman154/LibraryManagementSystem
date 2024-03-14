@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'category',
     'Author',
     'add_book',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
