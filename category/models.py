@@ -12,6 +12,6 @@ class Category(models.Model):
     date_created = models.DateTimeField(auto_now=True)
 
 
-    def __str__(str):
+    def __str__(self):
         return str(f"{self.name}")
 

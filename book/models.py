@@ -34,5 +34,8 @@ class BookType(models.Model):
     name = models.CharField(max_length=250)
     
 
+    # def __str__(self):
+    #     return str(f"{self.ISBN} - {self.title} - {self.name}")
+
     def __str__(self):
-        return str(f"{self.ISBN} - {self.title}")
+        return self.name

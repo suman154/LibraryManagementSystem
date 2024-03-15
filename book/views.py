@@ -39,34 +39,34 @@ class BooksEditView(GenericAPIView):
     queryset = Books.objects.all()
     serializer_class = BooksSerializer
 
-def get(self,request,pk):
-    try:
-        Books_obj = Books.objects.get(id=pk)
-    except:
-        return Response('Data not found!')
-    serializer = BooksSerializer(Books_obj)
-    return Response(serializer.data)
-
-def put(self,request,pk):
-    try:
-        Books_obj = Books.objects.get(id=pk)
-    except:
-        return Response('Data not found!')
-    serializer = BooksSerializer(Books_obj,data=request.data)
-    if serializer.is_valid():
-        serializer.save()
+    def get(self,request,pk):
+        try:
+            Books_obj = Books.objects.get(id=pk)
+        except:
+            return Response('Data not found!')
+        serializer = BooksSerializer(Books_obj)
         return Response(serializer.data)
-    else:
-        return Response(serializer.errors)
-    
 
-def delete(self,request,pk):
-    try:
-        Books_obj = Books.objects.all(id=pk)
-    except:
-        return Response('Data not found!')
-    Books_obj.delete()
-    return Response('Data Deleted')
+    def put(self,request,pk):
+        try:
+            Books_obj = Books.objects.get(id=pk)
+        except:
+            return Response('Data not found!')
+        serializer = BooksSerializer(Books_obj,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors)
+        
+
+    def delete(self,request,pk):
+        try:
+            Books_obj = Books.objects.all(id=pk)
+        except:
+            return Response('Data not found!')
+        Books_obj.delete()
+        return Response('Data Deleted')
 
 
 
@@ -80,34 +80,34 @@ class CategoryEditView(GenericAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-def get(self,request,pk):
-    try:
-        Category_obj = Books.objects.get(id=pk)
-    except:
-        return Response('Data not found!')
-    serializer = CategorySerializer(Category_obj)
-    return Response(serializer.data)
-
-def put(self,request,pk):
-    try:
-        Category_obj = Category.objects.get(id=pk)
-    except:
-        return Response('Data not found!')
-    serializer = CategorySerializer(Category_obj,data=request.data)
-    if serializer.is_valid():
-        serializer.save()
+    def get(self,request,pk):
+        try:
+            Category_obj = Books.objects.get(id=pk)
+        except:
+            return Response('Data not found!')
+        serializer = CategorySerializer(Category_obj)
         return Response(serializer.data)
-    else:
-        return Response(serializer.errors)
-    
 
-def delete(self,request,pk):
-    try:
-        Category_obj = Category.objects.all(id=pk)
-    except:
-        return Response('Data not found!')
-    Category_obj.delete()
-    return Response('Data Deleted')
+    def put(self,request,pk):
+        try:
+            Category_obj = Category.objects.get(id=pk)
+        except:
+            return Response('Data not found!')
+        serializer = CategorySerializer(Category_obj,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors)
+        
+
+    def delete(self,request,pk):
+        try:
+            Category_obj = Category.objects.all(id=pk)
+        except:
+            return Response('Data not found!')
+        Category_obj.delete()
+        return Response('Data Deleted')
 
 
 
@@ -123,34 +123,34 @@ class AuthorsEditView(GenericAPIView):
     queryset = Authors.objects.all()
     serializer_class = AuthorsSerializer
 
-def get(self,request,pk):
-    try:
-        Authors_obj = Authors.objects.get(id=pk)
-    except:
-        return Response('Data not found!')
-    serializer = BooksSerializer(Authors_obj)
-    return Response(serializer.data)
-
-def put(self,request,pk):
-    try:
-        Authors_obj = Authors.objects.get(id=pk)
-    except:
-        return Response('Data not found!')
-    serializer = AuthorsSerializer(Authors_obj,data=request.data)
-    if serializer.is_valid():
-        serializer.save()
+    def get(self,request,pk):
+        try:
+            Authors_obj = Authors.objects.get(id=pk)
+        except:
+            return Response('Data not found!')
+        serializer = BooksSerializer(Authors_obj)
         return Response(serializer.data)
-    else:
-        return Response(serializer.errors)
-    
 
-def delete(self,request,pk):
-    try:
-        Authors_obj = Authors.objects.all(id=pk)
-    except:
-        return Response('Data not found!')
-    Authors_obj.delete()
-    return Response('Data Deleted')
+    def put(self,request,pk):
+        try:
+            Authors_obj = Authors.objects.get(id=pk)
+        except:
+            return Response('Data not found!')
+        serializer = AuthorsSerializer(Authors_obj,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors)
+        
+
+    def delete(self,request,pk):
+        try:
+            Authors_obj = Authors.objects.all(id=pk)
+        except:
+            return Response('Data not found!')
+        Authors_obj.delete()
+        return Response('Data Deleted')
 
 
 
@@ -165,34 +165,34 @@ class AddBookEditView(GenericAPIView):
     queryset = AddBook.objects.all()
     serializer_class = AddBookSerializer
 
-def get(self,request,pk):
-    try:
-        AddBook_obj = AddBook.objects.get(id=pk)
-    except:
-        return Response('Data not found!')
-    serializer = AddBookSerializer(AddBook_obj)
-    return Response(serializer.data)
-
-def put(self,request,pk):
-    try:
-        AddBook_obj = AddBook.objects.get(id=pk)
-    except:
-        return Response('Data not found!')
-    serializer = AddBookSerializer(AddBook_obj,data=request.data)
-    if serializer.is_valid():
-        serializer.save()
+    def get(self,request,pk):
+        try:
+            AddBook_obj = AddBook.objects.get(id=pk)
+        except:
+            return Response('Data not found!')
+        serializer = AddBookSerializer(AddBook_obj)
         return Response(serializer.data)
-    else:
-        return Response(serializer.errors)
-    
 
-def delete(self,request,pk):
-    try:
-        AddBook_obj = AddBook.objects.all(id=pk)
-    except:
-        return Response('Data not found!')
-    AddBook_obj.delete()
-    return Response('Data Deleted')
+    def put(self,request,pk):
+        try:
+            AddBook_obj = AddBook.objects.get(id=pk)
+        except:
+            return Response('Data not found!')
+        serializer = AddBookSerializer(AddBook_obj,data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors)
+        
+
+    def delete(self,request,pk):
+        try:
+            AddBook_obj = AddBook.objects.all(id=pk)
+        except:
+            return Response('Data not found!')
+        AddBook_obj.delete()
+        return Response('Data Deleted')
 
 
 
