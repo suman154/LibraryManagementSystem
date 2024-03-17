@@ -1,0 +1,1 @@
+The Library Management System backend Django project is a Django-based solution for efficiently managing library operations. It provides user authentication, database management, book and patron management, transaction handling, reporting, API integration, and security features.
